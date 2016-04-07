@@ -1,0 +1,11 @@
+access_key="AWS KEY"
+secret_key="AWS SECRET"
+region="ap-northeast-1"
+
+datadog_user_name="datadog"
+admin_user_name="admin user name"
+admin_user_password="admin user password"
+team_user_name="team user name"
+team_user_password="team user password"
+
+cloudtrail_bucket="cloudtrail s3 bucket name"

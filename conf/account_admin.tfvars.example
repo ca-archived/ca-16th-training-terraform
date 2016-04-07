@@ -1,0 +1,6 @@
+access_key="AWS KEY"
+secret_key="AWS SECRET"
+region="ap-northeast-1"
+admin_user_name="admin user name"
+admin_user_password="admin user password"
+datadog_user_name="datadog"
