@@ -7,7 +7,7 @@ bucket=$1
 team=$2
 
 pushd . > /dev/null
-cd `dirname $0`/../team
+cd `dirname $0`/../aws-team
 rm -rf .terraform
 rm -rf terraform.tfstate
 rm -rf terraform.tfstate.backup
