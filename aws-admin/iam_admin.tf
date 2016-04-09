@@ -13,9 +13,9 @@ resource "aws_iam_user" "admin_user" {
 
 resource "aws_iam_access_key" "admin_user" {
     user = "${aws_iam_user.admin_user.name}"
-    //provisioner "local-exec" {
-    //    command = "AWS_DEFAULT_REGION=${var.region} AWS_ACCESS_KEY=${var.access_key} AWS_SECRET_ACCESS_KEY_ID=${var.secret_key} aws iam create-login-profile --user-name ${aws_iam_user.admin_user.name} --password ${var.admin_user_password} || AWS_DEFAULT_REGION=${var.region} AWS_ACCESS_KEY=${var.access_key} AWS_SECRET_ACCESS_KEY_ID=${var.secret_key} aws iam update-login-profile --user-name ${aws_iam_user.admin_user.name} --password ${var.admin_user_password}"
-    //}
+    provisioner "local-exec" {
+        command = "AWS_DEFAULT_REGION=${var.region} AWS_ACCESS_KEY=${var.access_key} AWS_SECRET_ACCESS_KEY_ID=${var.secret_key} aws iam create-login-profile --user-name ${aws_iam_user.admin_user.name} --password ${var.admin_user_password} || AWS_DEFAULT_REGION=${var.region} AWS_ACCESS_KEY=${var.access_key} AWS_SECRET_ACCESS_KEY_ID=${var.secret_key} aws iam update-login-profile --user-name ${aws_iam_user.admin_user.name} --password ${var.admin_user_password}"
+    }
 }
 
 resource "aws_iam_policy" "billing_full_access" {
